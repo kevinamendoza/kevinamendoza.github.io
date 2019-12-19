@@ -12,36 +12,28 @@
 
   </head>
   <body>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner text-center">
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active">Home</a>
-          <a class="nav-link" href="https://www.linkedin.com/in/kevinamendoza/">LinkedIn</a>
-          <a class="nav-link" href="https://github.com/kevinamendoza/">GitHub</a>
-          <a class="nav-link" href="https://www.kaggle.com/kevinamendoza">Kaggle</a>
-        </nav>
+    <div class="container-fluid">
+    <header>
+      <div class="header_tile" ng-controller='headerController'>
+        <div class="header_info_wrapper">
+          <h3>{{ name }}</h3>
+          <h5>{{ university }}</h5>
+          <h5>{{ school }}</h5>
+          <h5>{{ major }}</h5>
+          <h6>{{ pronouns }}</h6>
+
+          <div ng-controller='linkToController'>
+            <div ng-repeat="link in links">
+              <icon-link info="link"></icon-link>
+            </div>
+          </div>
+        </div>
+        <img src="img/pic-kmt.jpg" class="header_photo" alt="header photo"></img>
       </div>
     </header>
 
-    <main class="inner cover" role="main">
-      <div class="header_tile">
-        <div class="row">
-          <div class="col-8 header_info_wrapper">
-            <h3>Kevin Mendoza Tudares</h3>
-            <h5>Northwestern University</h5>
-            <h5>McCormick School of Engineering</h5>
-            <h5>Computer Science '22'</h5>
-            <h6>he/him/his</h6>
+    <main class="inner" role="main">
 
-            <a href="assets/resume-kmt.pdf"><i class="fa fa-file-text-o" aria-hidden="true" title="Resume"></i></a>
-            <a href="https://www.linkedin.com/in/kevinamendoza/"><i class="fab fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
-            <a href="https://github.com/kevinamendoza/"><i class="fab fa-github-alt" aria-hidden="true" title="GitHub"></i></a>
-            <a href="https://www.kaggle.com/kevinamendoza"><i class="fab fa-kaggle" aria-hidden="true" title="Kaggle"></i></a>
-          </div>
-          <img src="img/pic-kmt.jpg" class="header_photo col-4" alt="header photo"></img>
-        </div>
-      </div>
       <div class="background_info">
         <p>
           I am a computer scientist, researcher, and student at Northwestern University.
@@ -52,11 +44,10 @@
 
     </main>
 
-    <footer class="container mastfoot mt-auto">
-      <div class="row">
-        <div class="col-9"><p>Built by Kevin Mendoza Tudares and hosted on GitHub Pages.</p></div>
+    <footer class="container-fluid text-center">
+        <p>Built by Kevin Mendoza Tudares and hosted on GitHub Pages.</p>
 
-        <div class="col-3">
+        <div>
           <a href="assets/resume-kmt.pdf"><i class="fa fa-file-text-o" aria-hidden="true" title="Resume"></i></a>
           <a href="https://www.linkedin.com/in/kevinamendoza/"><i class="fab fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
           <a href="https://github.com/kevinamendoza/"><i class="fab fa-github-alt" aria-hidden="true" title="GitHub"></i></a>
